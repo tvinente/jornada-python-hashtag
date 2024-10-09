@@ -1,10 +1,12 @@
 # Passo a passo do projeto
 
-# Passo 1: Entrar no sistema da empresa
-    # https://dlp.hashtagtreinamentos.com/python/intensivao/login
+'''
+    Passo 1: Entrar no sistema da empresa
+        https://dlp.hashtagtreinamentos.com/python/intensivao/login
+'''
 
-# instalar pip install PyAutoGUI
-# python.exe -m pip install --upgrade pip
+ #instalar: pip install PyAutoGUI
+ #python.exe -m pip install --upgrade pip
 
 import time
 import pyautogui
@@ -33,7 +35,7 @@ time.sleep (3)
 
 # selecionar o campo e-mail
 
-pyautogui.click (x=1407, y=421)
+pyautogui.click (x=812, y=461)
 
 # escrever o e-mail
 
@@ -49,15 +51,16 @@ pyautogui.write ('aleatoria')
 
 # clique no botão login
 
-pyautogui.click (x=1077, y=763)
+pyautogui.click (x=970, y=676)
 
 time.sleep (3)
 
 # Passo 3: Importar a base de produtos para cadastro
 
-#import pandas as pd
+# instalar: pip install pandas
+# import pandas as pd
 
-tabela = pd.read_csv ('produtos.csv')
+tabela = pd.read_csv ('python_power_up/produtos.csv')
 
 print (tabela)
 
@@ -66,7 +69,7 @@ print (tabela)
 for linha in tabela.index:
     # cliclar no campo de código
 
-    pyautogui.click (x=1082, y=489)
+    pyautogui.click (x=781, y=310)
 
     # pegar da tabela o valor do campo que a gente quer preencher
 
@@ -80,7 +83,7 @@ for linha in tabela.index:
 
     pyautogui.press ('tab')
 
-    # preencher o campo
+    # preencher os campos
 
     pyautogui.write (str (tabela.loc[linha, 'marca']))
     pyautogui.press ('tab')
@@ -95,11 +98,13 @@ for linha in tabela.index:
 
     obs = tabela.loc[linha, 'obs']
 
+    #isna: verifica que não está vazio
+
     if not pd.isna (obs):
         pyautogui.write (str (tabela.loc[linha, 'obs']))
     pyautogui.press ('tab')
 
-     # cadastra o produto (botao enviar)
+    # cadastra o produto (botao enviar)
 
     pyautogui.press ('enter')
 
@@ -107,4 +112,4 @@ for linha in tabela.index:
 
     pyautogui.scroll (5000)
 
-    #Passo 5: Repetir o processo de cadastro até o fim
+# Passo 5: Repetir o processo de cadastro até o fim
