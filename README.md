@@ -1,4 +1,4 @@
-**Jornada Python - Hashtag Programação**
+# Jornada Python - Hashtag Programação
 
 **Aula 01 -** Python Power Up: Automação de Tarefas
 
