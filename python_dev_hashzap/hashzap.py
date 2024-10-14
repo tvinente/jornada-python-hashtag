@@ -12,7 +12,6 @@ def main(pagina):
             usuario_mensagem = mensagem ['usuario']
 
             # Adicionar mensagem no chat
-
             chat.controls.append(ft.Text (f'{usuario_mensagem} : {texto_mensagem}'))
         else:
             usuario_mensagem = mensagem['usuario']
@@ -22,10 +21,13 @@ def main(pagina):
     pagina.pubsub.subscribe(enviar_mensagem_tunel)
 
     def enviar_mensagem(evento):
-        pagina.pubsub.send_all ({'texto': campo_mensagem.value, 'usuario': nome_usuario.value, 'tipo': 'mensagem'})
+        pagina.pubsub.send_all ({
+            'texto': campo_mensagem.value, 
+            'usuario': nome_usuario.value, 
+            'tipo': 'mensagem'
+            })
         
         # Limpar mensagem
-
         campo_mensagem.value = ''
         pagina.update()
 
@@ -66,6 +68,7 @@ def main(pagina):
     botao_iniciar = ft.ElevatedButton ('Iniciar chat', on_click= entrar_chat)
 
     pagina.add(texto)
+    pagina.add(nome_usuario)
     pagina.add(botao_iniciar)
 
 ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8000)
