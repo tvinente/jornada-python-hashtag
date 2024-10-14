@@ -9,10 +9,10 @@
 * Cada mensagem enviada: -> Aparece para todo mundo
   * Nome: Texto da Mensagem
 
-produto = {
-    "nome": "iphone",
-    "preço": 6500,
-    "quantidade": 150
-    }
+ ** Instalar: **
 
- produto["quantidade"]
+* pip install flet
+* pip install flask
+* pip install flask-socketio
+* pip install simple-websocket
+  
