@@ -61,7 +61,7 @@ def main(pagina):
     )
 
     def entrar_chat(evento):
-        pagina.dialog = popup
+        pagina.overlay.append(popup)
         popup.open = True
         pagina. update ()
 
