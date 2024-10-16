@@ -1,9 +1,6 @@
-# A jornada-python-hashtag Flet app
+# Jornada Python - Hashtag Programação
 
-An example of a counter Flet app.
-
-To run the app:
-
-```
-flet run [app_directory]
-```
+**Aula 01 -** Python Power Up: Automação de Tarefas
+**Aula 02 -** Python Insights: Analisando Dados com Python
+**Aula 03 -** Python IA: Inteligência Artificial e Previsões
+**Aula 04 -** Python Dev: Criação de Sites e Sistemas com Python
